@@ -1,17 +1,3 @@
-ledinit=function()
-  gpio.mode(2,gpio.OUTPUT)
-  gpio.mode(4,gpio.OUTPUT)
-  gpio.mode(5,gpio.OUTPUT)
-  gpio.mode(6,gpio.OUTPUT)
-  gpio.mode(7,gpio.OUTPUT)
-
-  gpio.write(2,0)
-  gpio.write(4,1)
-  gpio.write(5,0)
-  gpio.write(6,0)
-  gpio.write(7,0)
-end
-
 chg2min=function(hm)
   local c1,c2 = string.match(hm,"(%d+):(%d+)")
   c1=c1+0
@@ -79,5 +65,4 @@ function GetTime()
 end
 
 tmlst1={"7:00","07:15","07:30","07:45","08:00","08:10","08:20","08:30","08:35","08:40","12:00","19:45","19:50","19:55","20:00","20:30","22:00"}
---ledinit()
 GetTime()
